@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사주팔자 종합 분석 — 하경희 & 최다민 (완전판)</title>
+<meta name="description" content="사주팔자 종합 분석 완전판 - 하경희 & 최다민">
+<title>사주팔자 종합 분석 — 하경희 & 최다민</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
 <style>
 :root {
   --bg:     #0c1018;
@@ -25,8 +31,20 @@
   --r: 7px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--white);line-height:1.8;font-size:15px; margin:0;}
+
+/* Vercel 웹 배포용 검증/수정 사항: 스크롤 시 상단 고정 헤더에 제목이 가려지지 않도록 패딩 추가 */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px; 
+}
+body {
+  font-family:'Noto Sans KR',sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  line-height:1.8;
+  font-size:15px; 
+  margin:0;
+}
 
 /* ── TAB SYSTEM ── */
 .tab-nav {
