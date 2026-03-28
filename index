@@ -7,9 +7,9 @@
 <title>사주팔자 종합 분석 — 하경희 & 최다민</title>
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap](https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap)" rel="stylesheet">
 
 <style>
 :root {
@@ -32,10 +32,10 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-/* Vercel 웹 배포용 검증/수정 사항: 스크롤 시 상단 고정 헤더에 제목이 가려지지 않도록 패딩 추가 */
+/* Vercel 배포 시 탭 클릭 후 이동할 때 헤더에 가려지지 않게 설정 */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px; 
+  scroll-padding-top: 80px; 
 }
 body {
   font-family:'Noto Sans KR',sans-serif;
@@ -44,6 +44,7 @@ body {
   line-height:1.8;
   font-size:15px; 
   margin:0;
+  overflow-x: hidden;
 }
 
 /* ── TAB SYSTEM ── */
@@ -79,7 +80,7 @@ body {
 }
 .tab-pane {
   display: none;
-  padding-top: 56px; /* Space for fixed tabs */
+  padding-top: 56px;
 }
 .tab-pane.active {
   display: block;
@@ -103,7 +104,7 @@ body {
 .hdr-eyebrow{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
 .hdr-name{
   font-family:'Noto Serif KR',serif;
-  font-size:clamp(34px,7vw,58px);font-weight:900;
+  font-size:clamp(34px, 7vw, 58px);font-weight:900;
   background:linear-gradient(130deg,var(--white) 20%,var(--teal) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   letter-spacing:-1px;line-height:1.1;
@@ -215,17 +216,11 @@ td.bold{font-weight:700;color:var(--white)}
 .dc-lb{font-size:11px;font-weight:700;color:var(--muted);min-width:44px;padding-top:2px}
 .dc-vl{color:#c0cce0;font-size:13px;line-height:1.6;flex:1}
 
-/* ── SEUN TABLE HIGHLIGHTS ── */
-.yr-best{background:rgba(126,200,152,.07)!important}
-.yr-warn{background:rgba(224,120,120,.07)!important}
-.yr-key{background:rgba(232,184,75,.05)!important}
-
 /* ── ZIWEI ── */
 .zw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:14px}
 .zw-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--r);padding:12px 14px}
 .zw-title{font-family:'Noto Serif KR',serif;font-size:12px;font-weight:700;color:var(--teal);margin-bottom:6px}
 .zw-main{font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px}
-.zw-ji{font-size:12px;color:var(--gold);margin-bottom:3px}
 .zw-good{font-size:11.5px;color:var(--sage)}
 .zw-bad{font-size:11.5px;color:var(--rose)}
 .zw-note{font-size:11.5px;color:var(--slate)}
@@ -267,8 +262,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);text-align:center;p
      TAB 1: 하경희 (92.08.19)
 ========================================================================================== -->
 <div id="tab-hk" class="tab-pane active">
-
-  <!-- HEADER -->
   <header class="hdr">
   <div class="hdr-in">
     <div class="hdr-eyebrow">四柱八字 · 紫微斗數 · 占星 종합 분석 완전판</div>
@@ -288,14 +281,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);text-align:center;p
   </div>
   </header>
 
-  <!-- NAV -->
   <nav class="nav">
   <div class="nav-sc">
     <a href="#hk-s1">판독요약</a><a href="#hk-s2">원국구조</a><a href="#hk-s3">평생총운</a>
-    <a href="#hk-s4">금전운</a><a href="#hk-s5">직업운</a><a href="#hk-s6">연애운</a>
-    <a href="#hk-s7">결혼운</a><a href="#hk-s8">건강운</a><a href="#hk-s9">인간관계</a>
-    <a href="#hk-s10">대운해석</a><a href="#hk-s11">세운해석</a><a href="#hk-s12">자미두수</a>
-    <a href="#hk-s13">서양점성</a><a href="#hk-s14">현실조언</a>
+    <a href="#hk-s4">금전운</a><a href="#hk-s5">직업운</a><a href="#hk-s10">대운흐름</a>
+    <a href="#hk-s12">자미두수</a><a href="#hk-s14">총평</a>
   </div>
   </nav>
 
@@ -305,465 +295,76 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);text-align:center;p
     <div class="ch-ey">Step 01</div>
     <h2 class="ch-ti">만세력 <span>판독 요약</span></h2>
     <div class="sec">
-    <h3 class="sec-ti">기본 정보 확인</h3>
-    <div class="box go"><strong>분석의 정밀도:</strong> 제공된 양력 생일과 23시 18분이라는 출생 시간은 한국 표준시(동경 135도)를 서울(동경 127도) 기준으로 32분 보정한 <strong>22시 46분(亥시)</strong>으로 정확히 판독되었습니다. 이를 통해 자미두수와 대운의 흐름이 완벽하게 확정되었습니다.</div>
-    <div class="tw"><table>
-    <thead><tr><th>항목</th><th>내용</th><th>신뢰도</th></tr></thead>
-    <tbody>
-    <tr><td class="bold">양력 생년월일시</td><td>1992년 08월 19일 23:18 (서울특별시)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">음력</td><td>1992년 07월 21일</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">지역 보정시</td><td>22:46 (해시 / 亥時)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">년주</td><td>壬申 — 정관(壬) / 정재(申)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">월주</td><td>戊申 — 상관(戊) / 정재(申)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">일주</td><td>丁卯 — 본원(丁) / 편인(卯)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">시주</td><td>辛亥 — 편재(辛) / 정관(亥)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">대운 시작</td><td>4세 (1995년) — 역행(逆行)</td><td class="ctr tg">✅ 확실</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">원국 도표 (완전 확정)</h3>
+    <h3 class="sec-ti">원국 도표</h3>
     <div class="tw"><table class="ptbl">
     <thead><tr><th style="width:13%">구분</th><th style="width:22%">時柱</th><th style="width:22%">日柱</th><th style="width:22%">月柱</th><th style="width:22%">年柱</th></tr></thead>
     <tbody>
-    <tr><td class="bold ctr">십성</td><td class="ctr">편재 (偏財)</td><td class="ctr bold tt">本元</td><td class="ctr">상관 (傷官)</td><td class="ctr tgo">정관 (正官)</td></tr>
+    <tr><td class="bold ctr">십성</td><td class="ctr">편재</td><td class="ctr bold tt">本元</td><td class="ctr">상관</td><td class="ctr tgo">정관</td></tr>
     <tr>
       <td class="bold ctr">천간</td>
-      <td class="ctr kbig cmetal">辛 <small style="font-size:10px;color:var(--muted)">-금</small></td>
-      <td class="ctr kbig cfire">丁 <small style="font-size:10px;color:var(--muted)">-화</small></td>
-      <td class="ctr kbig cearth">戊 <small style="font-size:10px;color:var(--muted)">+토</small></td>
-      <td class="ctr kbig cw">壬 <small style="font-size:10px;color:var(--muted)">+수</small></td>
+      <td class="ctr kbig cmetal">辛</td><td class="ctr kbig cfire">丁</td><td class="ctr kbig cearth">戊</td><td class="ctr kbig cw">壬</td>
     </tr>
     <tr>
       <td class="bold ctr">지지</td>
-      <td class="ctr jbig cw">亥 <small style="font-size:10px;color:var(--muted)">-수</small></td>
-      <td class="ctr jbig cwood" style="color:var(--teal)">卯 <small style="font-size:10px;color:var(--muted)">-목</small></td>
-      <td class="ctr jbig cmetal">申 <small style="font-size:10px;color:var(--muted)">+금</small></td>
-      <td class="ctr jbig cmetal">申 <small style="font-size:10px;color:var(--muted)">+금</small></td>
-    </tr>
-    <tr><td class="bold ctr">십성</td><td class="ctr tgo">정관</td><td class="ctr tgo">편인</td><td class="ctr tgo">정재</td><td class="ctr tt">정재</td></tr>
-    <tr><td class="bold ctr">12운성</td><td class="ctr">태(胎)</td><td class="ctr">병(病)</td><td class="ctr">목욕(沐浴)</td><td class="ctr">목욕(沐浴)</td></tr>
-    <tr><td class="bold ctr">신살</td><td class="ctr">천을귀인·역마</td><td class="ctr">도화·귀문</td><td class="ctr">귀문·역마</td><td class="ctr">역마살</td></tr>
-    </tbody>
-    </table></div>
-    <div class="box go" style="margin-top:10px">
-    <strong>사주의 핵심 열쇠 — 亥卯 반합(半合)의 기적:</strong><br>
-    겉보기에는 申(금)과 亥(수) 등 차갑고 매서운 기운이 가득해 丁(화) 일간이 위태로워 보입니다. 하지만 시지의 亥(수)와 일지의 卯(목)가 만나 <strong>'해묘 반합(목기운)'</strong>을 형성합니다. 나를 짓누르던 관성(스트레스, 규범)이 오히려 나를 돕는 인성(지혜, 자격, 조력자)으로 완벽하게 변환되는 매우 아름답고 지능적인 구조입니다.
-    </div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">오행 분포 (확정)</h3>
-    <div class="tw"><table>
-    <thead><tr><th>오행</th><th>천간·지지</th><th>총 강도</th><th>용신 여부</th></tr></thead>
-    <tbody>
-    <tr><td class="bold cwood">木 (목)</td><td>卯(일지)</td><td class="ctr tg bold">적절 (강력한 뿌리)</td><td class="ctr tg">희신 (나를 돕는 에너지)</td></tr>
-    <tr><td class="bold cfire" style="color:#f08878">火 (화)</td><td>丁(일간)</td><td class="ctr" style="color:var(--rose)">약함 (일간 홀로 존재)</td><td class="ctr tgo bold">용신 (가장 필요한 에너지)</td></tr>
-    <tr><td class="bold cearth" style="color:var(--gold)">土 (토)</td><td>戊(월간)</td><td class="ctr">보통</td><td class="ctr">한신</td></tr>
-    <tr><td class="bold cmetal">金 (금)</td><td>辛(시간), 申(월지), 申(년지)</td><td class="ctr tw2 bold">과다 (재성)</td><td class="ctr tw2">기신</td></tr>
-    <tr><td class="bold cw">水 (수)</td><td>壬(년간), 亥(시지)</td><td class="ctr tw2 bold">과다 (관성)</td><td class="ctr tw2">구신</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">합충형파해 (八字關係) 확정</h3>
-    <div class="tw"><table>
-    <thead><tr><th>관계</th><th>내용</th><th>삶에서의 의미</th></tr></thead>
-    <tbody>
-    <tr>
-      <td class="bold tg">亥卯 반합 (木)</td>
-      <td>시지(亥)와 일지(卯)가 뭉쳐 木(인성)을 생성</td>
-      <td>위기를 기회로 바꾸는 힘. 외부의 스트레스와 압박(관성)을 자신의 스펙과 지혜(인성)로 흡수하는 탁월한 생존 본능.</td>
-    </tr>
-    <tr>
-      <td class="bold tgo">丁壬 합 (木)</td>
-      <td>일간(丁)과 년간(壬)의 합 (정관과 합)</td>
-      <td>다정다감하고 정이 많음. 조직의 규범이나 권위 있는 존재(나이 차이 나는 연인이나 상사)와 깊은 유대감을 맺는 성향.</td>
-    </tr>
-    <tr>
-      <td class="bold tw2">卯申 귀문/원진</td>
-      <td>일지(卯)와 월지/년지(申)의 귀문관살</td>
-      <td>예술가적 예민함과 천재적인 직관력. 타인의 속마음을 꿰뚫어 보는 능력. 완벽주의 성향으로 인한 신경성 스트레스의 원인.</td>
+      <td class="ctr jbig cw">亥</td><td class="ctr jbig cwood" style="color:var(--teal)">卯</td><td class="ctr jbig cmetal">申</td><td class="ctr jbig cmetal">申</td>
     </tr>
     </tbody>
     </table></div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">신살 (神殺) 기운 분석</h3>
-    <div class="badges">
-      <span class="badge go">천을귀인 (時柱) — 말년의 완벽한 수호천사</span>
-      <span class="badge ro">귀문관살 (月·日) — 천재적인 직관력과 예민함</span>
-      <span class="badge ro">도화살 (日柱) — 숨길 수 없는 매력과 감수성</span>
-      <span class="badge sl">역마살 ×3 — 글로벌 에너지, 활동성</span>
-    </div>
-    <div class="box tl" style="margin-top:10px">
-    <strong>천을귀인(天乙貴人) — 時柱 (亥):</strong> 사주에서 가장 아름다운 길성인 천을귀인이 말년과 자녀, 혹은 나만의 은밀한 공간을 뜻하는 시주에 있습니다. 이는 생의 후반부로 갈수록 인생이 평탄해지고, 가장 위급한 순간에 기적처럼 조력자가 나타남을 의미합니다.<br><br>
-    <strong>귀문관살(鬼門關殺):</strong> 토끼(卯)와 원숭이(申)의 만남입니다. 대충 넘어가는 법이 없는 집요함, 남들이 보지 못하는 디테일을 캐치하는 영감(직관력)을 뜻합니다. 심리, 분석, 예술, 디자인, 전문직에서 타의 추종을 불허하는 재능으로 발휘됩니다.
+    <div class="box go">
+    <strong>핵심 구조:</strong> 시지의 亥(수)와 일지의 卯(목)가 만나 <strong>'해묘 반합'</strong>을 이룹니다. 주변의 압박을 지혜와 자격으로 승화시키는 탁월한 관인상생의 구조입니다.
     </div>
     </div>
     </section>
 
-    <!-- Step 02 -->
-    <section class="ch" id="hk-s2">
-    <div class="ch-ey">Step 02</div>
-    <h2 class="ch-ti">원국 <span>핵심 구조 분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">일간 丁火의 성질과 기본 기질</h3>
-    <p>丁火(정화)는 오행 중 불(火)의 음(陰)적 에너지입니다. 태양(丙)이 만물을 평등하게 비춘다면, <strong>丁火는 어두운 밤을 밝히는 별빛, 촛불, 혹은 집중된 레이저 빛</strong>에 비유됩니다.</p>
-    <p>겉보기에는 차분하고 조용해 보이지만, 어둠 속에서 타인의 마음을 꿰뚫어 보는 남다른 직관력(영감)과 따뜻한 본성을 지녔습니다. 특히 가을밤(申월 亥시)에 켜진 촛불이므로, 차가운 세상 속에서 홀로 빛나며 사람들에게 방향을 제시하는 '등대'와 같은 역할을 부여받았습니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">관인상생(官印相生)의 훌륭한 생존 구조</h3>
-    <p>이 사주에는 재물(金)과 명예/스트레스(水)가 매우 많습니다. 자칫하면 재다신약(재물이 많아 몸이 약해짐)으로 치우칠 수 있지만, 일지의 卯(목)가 기적 같은 역할을 합니다.</p>
-    <p>시지의 亥(수-관성)가 나를 공격하는 대신, 일지의 卯(목-인성)와 손을 잡고 木으로 변하여 나(丁火)를 땔감처럼 든든하게 지켜줍니다. 이를 명리학에서는 <strong>관인상생(조직의 권위와 스트레스가 나의 지식과 자격증으로 승화됨)</strong>이라 부르며, 어떤 극한의 환경에 던져져도 기어코 적응해내고 내 것으로 만드는 탁월한 생존력을 의미합니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">인생 핵심 테마 4가지</h3>
-    <div class="sub-ti">① 섬세한 완벽주의와 영감 (귀문관살)</div>
-    <p>일지와 월지/년지에 강하게 걸린 귀문관살은 남들이 보지 못하는 미세한 영역까지 감지하는 안테나입니다. 감각이 너무 뛰어나 때로는 스스로 피곤해질 수 있지만, 이를 직업적 무기(분석, 기획, 상담, 디자인 등)로 쓰면 독보적인 전문가가 됩니다.</p>
-    <div class="sub-ti">② 재물을 다루는 현실 감각 (과다한 재성)</div>
-    <p>申金 2개, 辛金 1개로 돈에 대한 현실 감각과 계산이 아주 빠릅니다. 허황된 꿈을 꾸기보다는 안정적이고 확실한 보상을 선호합니다. 하지만 일간이 약하므로 직접 큰 사업을 벌이기보다는 '조직 안에서' 혹은 '나의 자격증을 기반으로' 재물을 다룰 때 가장 안전합니다.</p>
-    <div class="sub-ti">③ 다정다감함과 관계의 얽힘 (丁壬 합)</div>
-    <p>사람을 좋아하고 한 번 정을 주면 깊게 빠지는 다정함(丁壬 합)이 있습니다. 특히 나보다 배울 점이 많거나 사회적 지위가 있는 사람에게 끌리는 경향이 강합니다.</p>
-    <div class="sub-ti">④ 늦게 피어나는 꽃, 천을귀인</div>
-    <p>사주의 결론부(시주)에 천을귀인이 놓여 있다는 것은 생의 전반부보다 후반부(40대 이후)에 인생의 진정한 안정을 찾고, 귀인의 도움으로 평탄한 길을 걷게 됨을 강력하게 시사합니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 03 -->
-    <section class="ch" id="hk-s3">
-    <div class="ch-ey">Step 03</div>
-    <h2 class="ch-ti">평생 <span>총운 (60년 용희신 대운의 기적)</span></h2>
-    <div class="box sg"><strong>이 사주의 가장 위대한 무기는 '대운(大運)'입니다.</strong> 원국이 다소 차갑고 신약하지만, 4세부터 63세까지 무려 60년간 이 사주에 가장 필요한 <strong>火(용신)와 木(희신)</strong>의 대운이 끊임없이 밀려옵니다. 이는 하늘이 이 사주를 완벽하게 호위하고 있음을 뜻합니다.</div>
-    <div class="sec">
-    <h3 class="sec-ti">10대 ~ 30대 초반 (4운 丁未, 14운 丙午, 24운 乙巳)</h3>
-    <p>이 30년은 그야말로 <strong>순수한 불(火)의 축제</strong>였습니다. 차가운 금수(金水) 기운에 눌려 꺼질 뻔했던 丁火 촛불에 하늘에서 거대한 태양과 불꽃을 부어준 시기입니다.</p>
-    <p>어린 시절부터 30대 초반(현재 이전)까지, 자신의 약한 에너지를 보완받으며 자아를 확립하고 치열하게 사회로 나아갈 수 있었던 것은 이 강력한 火 대운 덕분입니다. 때로는 강한 불길이 원국의 차가운 금수와 부딪혀 내면의 갈등이나 역동적인 변화(진로 방황, 이동)를 겪기도 했지만, 결과적으로 나를 단단하게 만들어준 시기였습니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">30대 중반 ~ 현재 (34운 甲辰, 34~43세) — 안정기로의 전환</h3>
-    <p>현재(2026년 기준 만 34세)는 <strong>甲辰(갑진) 대운</strong>의 초입에 서 있습니다. 이제 활활 타오르던 불의 시대(여름)가 끝나고, 나를 든든하게 지지해 줄 <strong>나무의 시대(봄)</strong>가 시작되었습니다.</p>
-    <p>甲木(정인)은 나(丁火)를 정석대로 생(生)해주는 훌륭한 땔감입니다. 이 시기부터는 들떠 있던 에너지가 가라앉고, 자격증, 문서, 학위, 부동산, 혹은 확고한 직업적 타이틀(인성)을 통해 삶의 안정을 구축해 나갑니다. 辰土(상관)는 활동성을 부여하지만, 원국의 申金과 만나 水(직장/스트레스)를 만들기도 하니 변화 속에서도 '내 자리'를 다지는 데 집중해야 합니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">40대 ~ 60대 (44운 癸卯, 54운 壬寅) — 완벽한 결실기</h3>
-    <p>44세부터 시작되는 <strong>癸卯(계묘)</strong>, 54세의 <strong>壬寅(임인)</strong> 대운은 <strong>인생의 진짜 황금기</strong>입니다. 대운의 지지가 온통 木(희신)으로 깔리며, 원국의 亥(수)와 완벽하게 합을 이루어 거대한 숲(안정망)을 형성합니다.</p>
-    <p>이 시기에는 스트레스가 지혜로 바뀌고(관인상생의 극대화), 그동안 쌓아온 전문성이 빛을 발하며, 재물과 명예를 모두 거머쥐는 강력한 안정을 누리게 됩니다. 특히 시간의 천을귀인이 이 시기와 맞물려 편안하고 풍요로운 말년을 보장합니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 04 -->
-    <section class="ch" id="hk-s4">
-    <div class="ch-ey">Step 04</div>
-    <h2 class="ch-ti">금전운 <span>분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">이 사주의 돈 구조 (재다신약의 극복)</h3>
-    <p>申(정재) 2개, 辛(편재) 1개로 재물 에너지가 매우 큽니다. 하지만 일간이 이를 모두 다스리기에는 에너지가 섬세합니다. 즉, 큰 돈이 오가는 것을 볼 줄 아는 눈(금융, 회계, 투자 감각)은 탁월하지만, 본인이 직접 무리한 레버리지를 일으켜 사업을 하면 돈에 치일 수 있습니다.</p>
-    <p>하지만 앞서 말한 <strong>대운의 완벽한 보조</strong> 덕분에 이 약점이 완벽히 커버됩니다. 木(인성) 대운이 들어오는 현재부터 40대, 50대는 문서(자격증, 면허, 부동산, 저작권)를 통해 재물을 내 것으로 고정시키는 탁월한 흐름을 탑니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">금전 전략</h3>
-    <div class="box sg"><strong>✔ 현실적 금전 전략:</strong><br>
-    ① 자격 기반 수익: 가장 강력한 무기입니다. 전문 자격, 라이선스, 특수 기술을 바탕으로 조직 내에서 높은 연봉을 받는 것이 최적입니다.<br>
-    ② 부동산 및 문서 투자: 현금으로 쥐고 있으면 흩어지기 쉽습니다. 돈이 생기면 곧바로 안전한 자산(부동산, 우량주 장기투자)이라는 '문서(木)' 형태로 묶어두는 것이 재물을 지키는 비결입니다.<br>
-    ③ 단기 투기 절대 금지: 귀문관살의 예민한 직관을 주식 단타나 코인에 쓰면 정신적 스트레스(건강 악화)로 돌아옵니다.</div>
-    </div>
-    </section>
-
-    <!-- Step 05 -->
-    <section class="ch" id="hk-s5">
-    <div class="ch-ey">Step 05</div>
-    <h2 class="ch-ti">직업운 <span>분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">타고난 직업 적성</h3>
-    <div class="tw"><table>
-    <thead><tr><th>적합 분야</th><th>근거</th><th>맞지 않는 형태</th></tr></thead>
-    <tbody>
-    <tr><td class="tg">연구직·전문직·기획</td><td>卯申 귀문관살 — 예리한 분석력과 디테일</td><td rowspan="4" class="tw2" style="vertical-align:middle">
-    규칙이 아예 없는 프리랜서<br>단순 육체 노동<br>리스크가 큰 영업/사업<br>시끄럽고 번잡한 환경
-    </td></tr>
-    <tr><td class="tg">금융·회계·세무</td><td>강력한 金(재성) 에너지와 계산 능력</td></tr>
-    <tr><td class="tg">심리상담·복지·교육</td><td>丁火의 따뜻함 + 亥卯의 지혜와 수용력</td></tr>
-    <tr><td class="tg">디자인·예술</td><td>편인의 독특한 감각과 귀문관살의 영감</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">직업 발전 시기</h3>
-    <p>현재 진입한 <strong>甲辰 대운</strong>은 직업적 안정성을 확고히 다지는 시기입니다. 과거 20대까지는 능력은 인정받으나 이리저리 부딪히거나 소모되는 느낌이 강했다면, 이제부터는 나만의 '전문 타이틀'을 획득하고 조직 내에서 대체 불가한 인력으로 자리 잡는 구간입니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 06 & 07 -->
-    <section class="ch" id="hk-s6">
-    <div class="ch-ey">Step 06 & 07</div>
-    <h2 class="ch-ti">연애 <span>및 결혼운</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">관계의 패턴과 이상형</h3>
-    <p>년주의 壬(정관)과 丁壬 합을 이루고 있어, <strong>배울 점이 있고 사회적으로 안정된, 조금은 권위가 있거나 듬직한 사람(연상 혹은 어른스러운 성향)</strong>에게 강하게 끌립니다. 연애를 할 초반에는 상대를 매우 세심하게 배려하고 헌신하는 로맨티시스트입니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">결혼운의 핵심 (해묘 반합)</h3>
-    <div class="box tl"><strong>결혼이 나를 구원하는 사주:</strong><br>
-    사주에서 배우자를 의미하는 글자는 壬(수)와 亥(수)입니다. 이 수(水) 기운은 본래 丁火인 나를 꺼트릴 수 있는 부담스러운 존재지만, <strong>시지의 亥(수)는 일지의 卯(목)와 만나 '나무(나의 땔감)'로 변합니다.</strong><br><br>
-    이는 연애 시절에는 상대가 나를 간섭하거나 조금 부담스럽게 느껴질 수 있으나, <strong>결혼(일지 입성)을 하고 시간이 지날수록 남편이 나를 물심양면으로 지원하는 든든한 후원자(인성)로 변모함</strong>을 의미합니다.</div>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">주의할 점 (귀문관살)</h3>
-    <p>일지에 귀문관살이 있어 관계에 있어 <strong>과도한 생각과 예민함</strong>이 독이 될 수 있습니다. "혹시 내 연락을 무시한 건가?", "저 말의 숨은 뜻이 뭐지?" 라며 혼자 상상의 나래를 펴다 스트레스를 받는 패턴을 주의해야 합니다. 때로는 있는 그대로 수용하는 둔감력이 관계를 지키는 열쇠입니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 08 -->
-    <section class="ch" id="hk-s8">
-    <div class="ch-ey">Step 08</div>
-    <h2 class="ch-ti">건강운 <span>분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">취약 부위 및 관리법</h3>
-    <div class="tw"><table>
-    <thead><tr><th>취약 부위</th><th>이유</th><th>주요 증상·관리법</th></tr></thead>
-    <tbody>
-    <tr class="yr-warn"><td class="bold">신경계·스트레스</td><td>卯申 귀문관살 + 과도한 金水 기운</td><td>생각이 너무 많아 생기는 불면증, 신경성 위염, 두통. <strong>명상, 가벼운 산책으로 뇌를 비우는 훈련이 필수</strong>입니다.</td></tr>
-    <tr><td class="bold">수족냉증·순환계</td><td>丁火 약함 + 차가운 金水 환경</td><td>몸이 기본적으로 차갑습니다. 따뜻한 차 마시기, 반신욕, 하체 보온을 생활화해야 합니다.</td></tr>
-    <tr><td class="bold">호흡기·기관지</td><td>가을(申월) 출생</td><td>건조하고 차가운 기운에 취약. 가습기 사용, 환절기 감기 철저 대비.</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-    </section>
-
-    <!-- Step 09 -->
-    <section class="ch" id="hk-s9">
-    <div class="ch-ey">Step 09</div>
-    <h2 class="ch-ti">인간관계 <span>/ 가족운</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">부모와의 관계 및 초년 환경</h3>
-    <p>년주와 월주에 정관, 상관, 정재가 위치하고 역마살이 강해, 어린 시절부터 다양한 환경의 변화를 겪었거나 일찍 철이 들어 사회성을 발달시켰을 가능성이 큽니다. 부모님은 현실적이고 규율을 중시하는 환경(申금)을 제공했을 것입니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">대인관계 패턴과 귀인</h3>
-    <p><strong>천재적 예민함이 만드는 거리감:</strong> 대인관계에서 눈치가 무척 빠릅니다. 상대방의 작은 표정이나 말투 변화에도 상대의 속마음을 파악해 냅니다. 다정하게 챙겨주지만, 누군가 예의 없이 선을 넘는 것을 극도로 싫어하며 속으로 조용히 벽을 치는 성향이 있습니다.</p>
-    <p><strong>최고의 귀인:</strong> 내 인생 후반부(자녀, 혹은 말년에 만나는 사람)에 위치한 <strong>시주(亥)의 천을귀인</strong>이 가장 강력한 귀인입니다. 내가 베푼 다정함이 생의 후반부에 귀인들의 도움으로 기적처럼 되돌아옵니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 10 & 11 -->
+    <!-- Step 10 -->
     <section class="ch" id="hk-s10">
-    <div class="ch-ey">Step 10 & 11</div>
-    <h2 class="ch-ti">대운 및 세운 <span>상세 흐름</span></h2>
+    <div class="ch-ey">Step 10</div>
+    <h2 class="ch-ti">대운 <span>상세 흐름</span></h2>
     <div class="dg">
     <div class="dc">
-    <div class="dc-hd"><div><div class="dc-n">14운 · 14~23세 · 2005</div><div class="dc-nm">丙午</div></div><div class="dc-ag">겁재+비견</div></div>
+    <div class="dc-hd now"><div><div class="dc-n">34~43세</div><div class="dc-nm">甲辰</div></div><div class="dc-ag">정인+상관</div></div>
     <div class="dc-bd">
-    <div class="dc-kw">거대한 태양과 불꽃 · 강렬한 자아의 시기</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">약한 丁火 일간에 하늘과 땅에서 엄청난 불길(丙, 午)이 쏟아진 시기.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">학창 시절과 20대 초반, 억눌려 있던 기운이 폭발하며 강한 경쟁심과 독립심으로 에너지를 발산했던 역동적 구간입니다.</span></div>
+    <div class="dc-kw">안정과 전문성 구축</div>
+    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">자격증, 문서, 확고한 직업을 통해 인생의 뿌리를 내리는 중요한 시기입니다.</span></div>
     </div>
     </div>
     <div class="dc">
-    <div class="dc-hd"><div><div class="dc-n">24운 · 24~33세 · 2015</div><div class="dc-nm">乙巳</div></div><div class="dc-ag">편인+겁재</div></div>
+    <div class="dc-hd peak"><div><div class="dc-n">44~53세</div><div class="dc-nm">癸卯</div></div><div class="dc-ag">편관+편인</div></div>
     <div class="dc-bd">
-    <div class="dc-kw">활동과 변화의 연속 · 경험의 확장</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">木과 火의 용희신 대운이나, 지지 巳(화)가 원국 亥(수)와 충돌(사해충).</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">자신감이 넘치고 많은 것을 시도했으나 이동, 이직, 감정 기복이 컸습니다. 다양한 경험을 통해 내공을 쌓아올린 시기.</span></div>
-    </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd now"><div><div class="dc-n">34운 · 34~43세 · 2025 ★현재</div><div class="dc-nm">甲辰</div></div><div class="dc-ag">정인+상관</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">안정과 전문성의 구축 · 진정한 독립</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">甲木(정인)이 丁火를 가장 안정적으로 살려주는 매우 좋은 대운의 진입.</span></div>
-    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">들뜬 에너지가 차분해지며, 자격증, 문서, 확고한 직업을 통해 뿌리를 내리는 시기. 결혼과 직업적 안정이 동시에 이루어지는 황금기의 서막.</span></div>
-    </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd peak"><div><div class="dc-n">44운 · 44~53세 · 2035 ◎</div><div class="dc-nm">癸卯</div></div><div class="dc-ag">편관+편인</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">관인상생의 극대화 · 이 사주 최대의 황금기</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">대운 卯가 원국의 亥와 만나 다시 거대한 木(인성) 숲을 완벽히 이룸.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">조직 내 핵심 인물로 인정받고, 그간의 스트레스가 온전히 나의 권위와 지혜로 변환되어 재물/명예가 폭발하는 구간.</span></div>
-    </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd peak"><div><div class="dc-n">54운 · 54~63세 · 2045 ◎</div><div class="dc-nm">壬寅</div></div><div class="dc-ag">정관+정인</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">명예와 수용력 · 평안하고 여유로운 말년</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">寅(목) 인성 대운의 지속. 원국의 천을귀인 발동과 겹칩니다.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">무리하지 않아도 명예가 따르고 아랫사람들의 존경을 받는 편안하고 풍요로운 말년입니다.</span></div>
-    </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd"><div><div class="dc-n">64운 · 64~73세 · 2055</div><div class="dc-nm">辛丑</div></div><div class="dc-ag">편재+식신</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">재물의 갈무리 · 취미와 휴식의 시기</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">金과 土 기운의 도래. 60년 목화 대운이 마무리됨.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">그동안 벌어들인 자산을 안정적으로 굴리며, 현업에서 물러나 건강과 취미생활에 집중하는 휴식기입니다.</span></div>
-    </div>
-    </div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">최근 세운 (2025~2027 핵심)</h3>
-    <div class="tw"><table>
-    <thead><tr><th style="width:17%">연도·나이</th><th style="width:12%">세운</th><th style="width:55%">핵심 내용</th><th style="width:16%">등급</th></tr></thead>
-    <tbody>
-    <tr class="yr-best">
-      <td class="bold">2025년<br>만 33세</td><td class="ctr bold">乙巳년</td>
-      <td><strong>새로운 대운(甲辰)과 맞물려 강력한 목화(木火) 용희신이 들어오는 최고의 해.</strong> 그동안의 피로를 씻고 내 능력을 120% 발휘할 수 있는 환경이 조성됩니다. 새로운 도전, 승진, 혹은 좋은 인연을 맺기에 완벽한 하늘의 타이밍입니다.</td>
-      <td class="ctr tg">★ 도약</td>
-    </tr>
-    <tr class="yr-best">
-      <td class="bold">2026년<br>만 34세</td><td class="ctr bold">丙午년</td>
-      <td>하늘과 땅이 온통 강력한 불(火) 에너지로 가득 차, 丁火 일간이 인생에서 가장 자신감 넘치고 주도적으로 움직이는 해입니다. 독립, 결혼, 승진 등 굵직한 결정들이 강력한 추진력을 얻습니다.</td>
-      <td class="ctr tg">★ 정점</td>
-    </tr>
-    <tr class="yr-key">
-      <td class="bold">2027년<br>만 35세</td><td class="ctr bold">丁未년</td>
-      <td>안정을 이어갑니다. 地支의 未(토)가 원국의 亥, 卯와 어우러져 <strong>亥卯未 삼합(목기운 극대화)</strong>을 이룹니다. 문서(부동산 취득, 계약, 자격증) 쪽으로 대길하며 자산이 크게 불어날 수 있는 아주 유리한 해입니다.</td>
-      <td class="ctr tt">안정·문서</td>
-    </tr>
-    </tbody>
-    </table></div>
-    </div>
-    </section>
-
-    <!-- Step 12 -->
-    <section class="ch" id="hk-s12">
-    <div class="ch-ey">Step 12</div>
-    <h2 class="ch-ti">자미두수 <span>명반 상세 분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">명반 기본 정보 (1992년 壬申년, 亥시 기준)</h3>
-    <div class="tw"><table>
-    <thead><tr><th>항목</th><th>내용</th></tr></thead>
-    <tbody>
-    <tr><td class="bold">오행국</td><td>水二局 — 수(水)기와 인연. 대한 시작 2세</td></tr>
-    <tr><td class="bold">사화(四化)</td><td><strong>壬년 사화:</strong> 化祿(天梁) · 化權(紫微) · 化科(左輔) · 化忌(武曲)</td></tr>
-    <tr><td class="bold">핵심 풀이</td><td>재물(무곡)의 무리한 투자를 경계하고, 전문성(천량)과 윗사람의 덕으로 성공하는 명반</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">12궁 상세 해석</h3>
-    <div class="zw-grid">
-    <div class="zw-card">
-    <div class="zw-title">命宮 (명궁)</div>
-    <div class="zw-main">天機 (천기)</div>
-    <div class="zw-note">지혜와 아이디어의 별. 두뇌 회전이 빠르고 분석력이 뛰어나 참모, 기획자로서의 재능이 출중합니다. (명리학의 귀문관살과 완벽히 공명)</div>
-    </div>
-    <div class="zw-card zw-best">
-    <div class="zw-title">福德宮 (복덕궁)</div>
-    <div class="zw-main">天梁 化祿</div>
-    <div class="zw-hua">化祿: 天梁 (천량)</div>
-    <div class="zw-note">내면과 정신세계를 뜻하는 궁에 <strong>가장 좋은 화록(풍요의 별)</strong>이 들었습니다. 위기가 닥쳐도 기적처럼 살아나는 천우신조의 복을 타고났습니다.</div>
-    </div>
-    <div class="zw-card">
-    <div class="zw-title">官祿宮 (관록궁)</div>
-    <div class="zw-main">太陰 (태음)</div>
-    <div class="zw-note">부드럽고 꼼꼼한 성향의 별. 직업적으로 섬세함을 요하는 일(재무, 행정, 디자인, 상담 등)에서 큰 능력을 발휘하며 여성 동료/고객이 큰 도움이 됩니다.</div>
-    </div>
-    <div class="zw-card zw-special">
-    <div class="zw-title">財帛宮 (재백궁)</div>
-    <div class="zw-main">武曲 化忌</div>
-    <div class="zw-hua">化忌: 武曲 (무곡)</div>
-    <div class="zw-bad">주의 구간</div>
-    <div class="zw-note">재물의 별 무곡에 화기(막힘)가 붙었습니다. 현금을 무리하게 굴리거나 사업, 투기에 손대면 막힙니다. <strong>돈을 다룰 때는 무조건 '안정 자산(문서)'</strong>이어야 합니다.</div>
-    </div>
-    <div class="zw-card">
-    <div class="zw-title">夫妻宮 (부처궁)</div>
-    <div class="zw-main">太陽 (태양)</div>
-    <div class="zw-note">남편 자리에 밝고 공명정대한 태양이 있습니다. 명리학의 丁壬 합처럼, 본인보다 빛나거나 듬직하게 자신을 이끌어 줄 수 있는 상대를 만나게 됩니다.</div>
-    </div>
-    <div class="zw-card">
-    <div class="zw-title">遷移宮 (천이궁)</div>
-    <div class="zw-main">巨門 (거문)</div>
-    <div class="zw-note">외부 활동이나 인간관계에서 거문(말, 구설)의 영향이 있습니다. 밖에서 말실수나 불필요한 논쟁을 피하고, 언어를 전문적으로 쓰는 일로 승화시키면 길합니다.</div>
-    </div>
-    <div class="zw-card">
-    <div class="zw-title">交友宮 (교우궁)</div>
-    <div class="zw-main">紫微 化權</div>
-    <div class="zw-hua">化權: 紫微 (자미)</div>
-    <div class="zw-note">친구, 동료 자리에 황제의 별이 권력을 쥐었습니다. 내 주변에 사회적으로 지위가 높거나 능력이 뛰어난 사람들이 많이 포진하게 됨을 의미합니다.</div>
-    </div>
-    <div class="zw-card zw-best">
-    <div class="zw-title">疾厄宮 (질액궁)</div>
-    <div class="zw-main">左輔 化科</div>
-    <div class="zw-hua">化科: 左輔 (좌보)</div>
-    <div class="zw-note">건강과 몸을 뜻하는 자리에 화과(도움, 명예)가 있습니다. 아파도 좋은 의사나 명의(귀인)를 만나 치료가 잘 되는 길한 구조입니다.</div>
+    <div class="dc-kw">최고의 황금기</div>
+    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">지혜가 완성되고 사회적 명예와 재물이 최고조에 달하는 구간입니다.</span></div>
     </div>
     </div>
     </div>
     </section>
-
-    <!-- Step 13 -->
-    <section class="ch" id="hk-s13">
-    <div class="ch-ey">Step 13</div>
-    <h2 class="ch-ti">서양 점성술 <span>교차 검증</span></h2>
-    <div class="sec">
-    <div class="box tl">
-    <strong>명리학 + 점성술 종합 일치 패턴:</strong><br>
-    ① <strong>태양(Sun) 사자자리 (Leo):</strong> 한여름 밤의 별빛(丁火)이지만, 내면에는 사자자리의 긍지와 따뜻한 품성을 가지고 있습니다. 남들의 인정을 받을 때 가장 크게 빛납니다.<br>
-    ② <strong>달(Moon) 황소자리 (Taurus):</strong> 정서적 안정을 최고로 칩니다. 명리학의 申(정재) 성향과 일치하며, 물질적 안정감과 아름답고 평화로운 환경이 주어져야 마음이 편안합니다.<br>
-    ③ <strong>수성(Mercury) 처녀자리 (Virgo):</strong> 지성과 분석력의 최고봉. 사주의 <strong>'묘신 귀문관살'</strong>과 완벽하게 일치합니다. 미세한 결함을 찾아내고 체계화하는 능력은 타의 추종을 불허하는 천재적 수준입니다.
-    </div>
-    </div>
-    </section>
-
-    <!-- Step 14 -->
+    
     <section class="ch" id="hk-s14">
-    <div class="ch-ey">Step 14</div>
+    <div class="ch-ey">Final</div>
     <h2 class="ch-ti">현실 조언 <span>및 총평</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">가장 빛나는 삶을 위한 3가지 전략</h3>
-    <div class="sub-ti">① 당신의 '예민함'은 병이 아니라 '최고의 재능'입니다.</div>
-    <p>묘신 귀문과 처녀자리 수성의 결합으로, 남들이 놓치는 것을 보는 눈이 있습니다. 이를 일상생활의 인간관계에 쓰면 스트레스가 되지만, 직업적 영역(기획, 검수, 디자인, 분석 등)에 쓰면 엄청난 부가가치를 창출하는 무기가 됩니다. 예민함을 무기로 쓰십시오.</p>
-    <div class="sub-ti">② 몸을 따뜻하게 하고, 생각을 멈추는 스위치를 만드세요.</div>
-    <p>머리가 너무 비상하게 돌아가고, 몸의 기운은 차갑습니다. 육체적 에너지를 소모하는 가벼운 땀 흘리는 운동(유산소)으로 머리로 몰린 에너지를 몸으로 분산시켜야 합니다. 따뜻한 차 한 잔과 멍 때리는 시간이 최고의 보약입니다.</p>
-    <div class="sub-ti">③ 다가오는 2025~2026년의 폭발적 운을 적극적으로 누리세요.</div>
-    <p>인생의 안정을 다지는 대운의 시작과 함께, 폭발적인 용희신 세운이 들어옵니다. 무언가를 새로 배우거나, 자격증에 도전하거나, 이직을 하거나, 좋은 사람을 만나기에 더없이 완벽한 하늘의 타이밍입니다. 의심하지 말고 적극적으로 움직이세요.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">총평</h3>
     <div class="box go">
-    <strong>"차가운 밤바다 위를 비추는 등대, 마침내 거대한 숲(안식처)을 만나다."</strong><br>
-    스스로는 약하고 외롭다 여길 수 있지만, 하늘은 당신에게 60년이라는 어마어마한 호위 무사(용희신 대운)를 붙여 주었습니다. 당신에게 다가오는 압박과 스트레스조차 결국엔 당신의 지혜와 능력을 키워주는 자양분이 됩니다. 당신의 직관을 믿고, 따뜻한 마음을 잃지 않는다면 생의 후반부로 갈수록 눈부시게 평탄한 길이 열릴 것입니다.
+    어둠 속의 별빛은 그 자체로 길잡이입니다. 당신의 예민함은 최고의 재능이며, 다가오는 2026년은 인생의 가장 큰 도약점이 될 것입니다.
     </div>
-    </div>
-    <blockquote>
-      <p>어둠 속의 별빛은 그 자체로 길잡이입니다.<br>
-      완벽하려 애쓰지 않아도 당신의 빛은 이미 충분히 아름답습니다.<br>
-      새롭게 열리는 봄날의 숲(甲辰 대운)에서,<br>
-      이제 편안하게 뿌리내리고 당신만의 따뜻한 빛을 마음껏 발산하시길 바랍니다.
-      </p>
-    </blockquote>
     </section>
-  </div><!-- /.wrap -->
+  </div>
 
   <footer>
-    <div>사주팔자 · 자미두수 · 서양점성술 종합 분석 완전판 — 하경희</div>
-    <div style="margin-top:4px">壬申년 戊申월 丁卯일 辛亥시 · 양력 1992. 08. 19 · 서울특별시</div>
-    <div style="margin-top:4px">정통 사주 구조 확정 · 60년 용희신 대운 풀이 · 3중 교차 검증 정밀 분석</div>
+    <div>사주팔자 종합 분석 — 하경희 리포트</div>
   </footer>
 </div>
-
 
 <!-- =========================================================================================
      TAB 2: 최다민 (93.02.13)
 ========================================================================================== -->
 <div id="tab-cd" class="tab-pane">
-
-  <!-- HEADER -->
   <header class="hdr" style="background:linear-gradient(155deg,#0c1018 0%,#1a2a40 55%,#0c1018 100%);">
   <div class="hdr-in">
     <div class="hdr-eyebrow">四柱八字 · 紫微斗數 · 占星 종합 분석 완전판</div>
     <div class="hdr-name">최다민</div>
     <div class="hdr-meta">
       양력 <strong>1993. 02. 13</strong> · 오전 11:00 · 여 · 서울특별시 서대문구<br>
-      음력 1993. 01. 22 · 계유(癸酉)년 · 갑인(甲寅)월 · 을축(乙丑)일 · 신사(辛巳)시<br>
-      오행국: 木三局 · 대운 시작 7세
+      음력 1993. 01. 22 · 계유(癸酉)년 · 갑인(甲寅)월 · 을축(乙丑)일 · 신사(辛巳)시
     </div>
-    <div class="hdr-alert">★ 기획과 시스템의 달인 · 오행구족의 안정감 · 2026년 대전환점 분석 완료</div>
+    <div class="hdr-alert">★ 기획과 시스템의 달인 · 오행구족의 안정감 · 2026년 대전환점</div>
     <div class="pstrip">
       <div class="pbox"><div class="pl">년주</div><div class="pk cw">癸</div><div class="pj cmetal">酉</div><div class="ps">편인 / 편관</div></div>
       <div class="pbox"><div class="pl">월주</div><div class="pk cwood">甲</div><div class="pj cwood">寅</div><div class="ps">겁재 / 겁재</div></div>
@@ -773,287 +374,81 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);text-align:center;p
   </div>
   </header>
 
-  <!-- NAV -->
   <nav class="nav">
   <div class="nav-sc">
-    <a href="#cd-s1">판독요약</a><a href="#cd-s2">원국구조</a><a href="#cd-s3">평생총운</a>
-    <a href="#cd-s4">금전운</a><a href="#cd-s5">직업운</a><a href="#cd-s6">연애운</a>
-    <a href="#cd-s7">결혼운</a><a href="#cd-s8">건강운</a><a href="#cd-s9">인간관계</a>
-    <a href="#cd-s10">대운해석</a><a href="#cd-s11">세운해석</a><a href="#cd-s12">자미두수</a>
-    <a href="#cd-s13">서양점성</a><a href="#cd-s14">현실조언</a>
+    <a href="#cd-s1">판독요약</a><a href="#cd-s2">원국구조</a><a href="#cd-s5">직업운</a>
+    <a href="#cd-s10">대운흐름</a><a href="#cd-s12">자미두수</a><a href="#cd-s14">총평</a>
   </div>
   </nav>
 
   <div class="wrap">
-    <!-- Step 01 -->
     <section class="ch" id="cd-s1">
     <div class="ch-ey">Step 01</div>
     <h2 class="ch-ti">만세력 <span>판독 요약</span></h2>
     <div class="sec">
-    <h3 class="sec-ti">기본 정보 확인</h3>
-    <div class="box go"><strong>분석의 정밀도:</strong> 서울특별시 서대문구 출생, 오전 11:00 출생으로 <strong>巳시(사시: 09:30~11:30)</strong>로 정확히 확정되었습니다. 모든 오행이 사주에 골고루 포진된 '오행구족'의 매우 안정적인 명식입니다.</div>
-    <div class="tw"><table>
-    <thead><tr><th>항목</th><th>내용</th><th>신뢰도</th></tr></thead>
-    <tbody>
-    <tr><td class="bold">양력 생년월일시</td><td>1993년 02월 13일 11:00 (서울특별시 서대문구)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">음력</td><td>1993년 01월 22일</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">지역 보정시</td><td>10:28 (사시 / 巳時)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">년주</td><td>癸酉 — 편인(癸) / 편관(酉)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">월주</td><td>甲寅 — 겁재(甲) / 겁재(寅)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">일주</td><td>乙丑 — 본원(乙) / 편재(丑)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">시주</td><td>辛巳 — 편관(辛) / 상관(巳)</td><td class="ctr tg">✅ 확실</td></tr>
-    <tr><td class="bold">대운 시작</td><td>7세 (1999년) — 순행(順行)</td><td class="ctr tg">✅ 확실</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">오행 분포 (오행구족 확정)</h3>
-    <div class="tw"><table>
-    <thead><tr><th>오행</th><th>천간·지지</th><th>총 강도</th><th>용신 여부</th></tr></thead>
-    <tbody>
-    <tr><td class="bold cwood">木 (목)</td><td>乙(일간), 甲(월간), 寅(월지)</td><td class="ctr tw2 bold">과다 (생명력 최강)</td><td class="ctr">기신 (힘을 빼야 함)</td></tr>
-    <tr><td class="bold cfire" style="color:#f08878">火 (화)</td><td>巳(시지)</td><td class="ctr tg bold">적절 (소통구)</td><td class="ctr tgo bold">용신 (재능 발현)</td></tr>
-    <tr><td class="bold cearth" style="color:var(--gold)">土 (토)</td><td>丑(일지)</td><td class="ctr">보통</td><td class="ctr tg">희신 (재물)</td></tr>
-    <tr><td class="bold cmetal">金 (금)</td><td>辛(시간), 酉(년지)</td><td class="ctr tg bold">적절 (규범과 틀)</td><td class="ctr">한신</td></tr>
-    <tr><td class="bold cw">水 (수)</td><td>癸(년간)</td><td class="ctr">보통</td><td class="ctr">참고</td></tr>
-    </tbody>
-    </table></div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">합충형파해 및 신살 분석</h3>
-    <div class="badges">
-      <span class="badge tl">오행구족 (五行具足) — 균형과 안정감</span>
-      <span class="badge go">사유축 삼합 (巳酉丑) — 완벽한 시스템 구축</span>
-      <span class="badge sl">역마살 (寅, 巳) — 강한 활동 에너지</span>
-      <span class="badge ro">화개살 (丑) — 끈기와 내면의 깊이</span>
-    </div>
-    <div class="box tl" style="margin-top:10px">
-    <strong>사유축 삼합 (巳酉丑 金局):</strong> 시지의 巳, 년지의 酉, 일지의 丑이 만나 거대한 금(金-관성)의 시스템을 구축합니다. 목(木)의 자유분방함을 금(金)의 체계로 깔끔하게 묶어내는, <strong>타고난 프로젝트 관리자 및 기획자</strong>의 역량을 보여주는 구조입니다.<br><br>
-    <strong>역마살 (寅, 巳):</strong> 월지와 시지에 강한 역마가 자리하여 가만히 머물기보다 동적인 활동(해외 이동, 유산소 운동, 큰 규모의 프로젝트)을 통해 스트레스를 푸는 진취적인 기질을 띄고 있습니다.
+    <div class="box tl">
+    <strong>오행구족(五行具足):</strong> 목, 화, 토, 금, 수 모든 기운을 고루 갖춘 안정적인 사주입니다. 특히 기획력과 추진력이 조화를 이룬 전문가의 명식입니다.
     </div>
     </div>
     </section>
 
-    <!-- Step 02 -->
-    <section class="ch" id="cd-s2">
-    <div class="ch-ey">Step 02</div>
-    <h2 class="ch-ti">원국 <span>핵심 구조 분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">일간 乙木의 성질과 외유내강</h3>
-    <p>본인을 상징하는 일간은 <strong>乙木(을목)</strong>으로, 봄날에 피어나는 유연하지만 강인한 화초나 넝쿨에 비유할 수 있습니다. 특히 봄의 시작을 알리는 인(寅)월에 태어나 뿌리가 아주 튼튼하고 생명력이 무척 강합니다.</p>
-    <p>을축(乙丑) 일주는 겉으로는 부드럽고 사람들과 잘 어울리는 유연함을 가졌지만, 내면에는 한겨울의 언 땅(축토)을 뚫고 나오는 엄청난 끈기와 인내심을 품고 있는 <strong>외유내강의 표본</strong>입니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">인생 핵심 테마 3가지</h3>
-    <div class="sub-ti">① 체계적이고 논리적인 기획자 (목과 금의 완벽한 조화)</div>
-    <p>목(木)의 창의성과 금(金)의 맺고 끊음이 절묘하게 배합되어 있어 대충 넘어가는 법이 없습니다. 매사를 분석하고 계획을 세우거나, 복잡한 것을 시스템화하고 매뉴얼로 정리하는 딱 떨어지는 일처리에 탁월한 재능이 있습니다.</p>
-    <div class="sub-ti">② 강인한 자아와 독립심 (갑인 겁재 기둥)</div>
-    <p>월주에 갑인(甲寅)이라는 거대한 나무 기둥(겁재)이 굳건히 서 있습니다. 주관이 뚜렷하고 승부욕이 강하며, 어떤 난관이 와도 뚫고 나가는 강한 추진력이 있습니다. 다만 고집이 강해질 수 있어 융통성을 발휘하는 연습이 필요합니다.</p>
-    <div class="sub-ti">③ 오행구족의 축복</div>
-    <p>목, 화, 토, 금, 수 오행이 하나도 빠짐없이 고르게 다 갖춰진 아주 좋은 형태(오행구족)입니다. 인생에서 극단적인 롤러코스터를 타기보다는, 안정적인 흐름 속에서 차곡차곡 성취를 쌓아가는 복 받은 사주입니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 03 & 04 -->
-    <section class="ch" id="cd-s3">
-    <div class="ch-ey">Step 03 & 04</div>
-    <h2 class="ch-ti">평생 총운 및 <span>금전운</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">평생 총운의 핵심 (안정적 상승)</h3>
-    <p>오행이 골고루 갖춰진 명식은 어떤 대운이 와도 크게 흔들리지 않는 장점이 있습니다. 특히 20대 후반부터 시작된 <strong>화(火) 대운(정사, 무오, 기미)</strong>은 튼튼한 나무(나)가 불꽃을 피워내어 아름다운 꽃과 열매를 맺는 시기입니다. 생의 중반부(30대~50대)가 인생의 최고 전성기로 설계되어 있습니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">전략적 투자자의 금전운</h3>
-    <p>재물운을 뜻하는 글자가 일지(본인의 바로 밑)에 <strong>'편재(丑토)'</strong>로 깔려 있습니다. 이는 단순히 차곡차곡 모으는 저축을 넘어, 거시적인 흐름을 읽고 자산을 시스템적으로 굴리는 투자(예: 해외 주식, ETF 등)에 아주 밝은 안목을 가지고 있음을 의미합니다.</p>
-    <div class="box sg"><strong>✔ 금전 관리 전략:</strong> 일지의 丑토는 '금고'의 역할을 하기도 합니다. 자산을 현금으로 두기보다는, 자신이 잘 분석하고 이해한 분야(시스템화된 투자)에 묶어두는 것이 재물을 안정적으로 불리는 비결입니다.</div>
-    </div>
-    </section>
-
-    <!-- Step 05 -->
-    <section class="ch" id="cd-s5">
-    <div class="ch-ey">Step 05</div>
-    <h2 class="ch-ti">직업운 <span>분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">기획과 프로젝트의 달인</h3>
-    <p>무에서 유를 창조하는 목(木)의 기운으로 아이디어를 내고, 巳酉丑 금국(金局)의 기운으로 뼈대를 세우고 관리합니다. <strong>프로젝트 단위의 기획 업무, 시스템 관리, IT, 혹은 거시적인 자산 관리 업무</strong>가 천직에 가깝습니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">직업적 결정적 전환점 (2025~2026년)</h3>
-    <p>다가오는 <strong>2025년(을사년)과 2026년(병오년)</strong>은 매우 강력한 화(火)의 기운(식상운)이 들어오는 해입니다. 특히 2026년은 기존의 조직이나 직장(관성)이라는 틀을 깨고 나가려는 독립의 에너지가 최고조에 달합니다. 퇴사나 이직, 혹은 완전히 새로운 진로를 실행에 옮기게 되는 인생의 중요한 전환점이 될 확률이 매우 높습니다.</p>
-    </div>
-    </section>
-
-    <!-- Step 06 & 07 -->
-    <section class="ch" id="cd-s6">
-    <div class="ch-ey">Step 06 & 07</div>
-    <h2 class="ch-ti">연애 <span>및 결혼운</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">인연의 끈과 동반자적 관계</h3>
-    <p>사주에서 배우자/남성을 의미하는 금(金) 기운이 연주(癸酉)와 시주(辛巳)에 분명하게 자리 잡고 있어 인연의 끈은 늘 열려 있는 편입니다. 巳酉丑 삼합이 관성(남자)을 강하게 끌어당기는 구조입니다.</p>
-    <div class="box tl"><strong>필요한 파트너의 조건:</strong><br>본인 스스로 주관이 뚜렷하고 자기 관리와 삶의 계획이 철저한 분입니다. 연애나 결혼에 있어서도 자신의 독립적인 영역과 라이프스타일을 존중해 주는 사람을 만나는 것이 1순위입니다. 너무 통제하려 들거나 삶의 속도를 늦추는 사람보다는, <strong>함께 발전하고 취미(여행이나 운동 등)를 긍정적으로 공유할 수 있는 '동반자' 형태의 인연</strong>이 가장 잘 맞습니다.</div>
-    </div>
-    </section>
-
-    <!-- Step 08 -->
-    <section class="ch" id="cd-s8">
-    <div class="ch-ey">Step 08</div>
-    <h2 class="ch-ti">건강운 <span>분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">에너지 발산의 중요성</h3>
-    <p>사주에 나무(木) 기운이 숲을 이룰 정도로 풍부하고 강합니다. 나무가 많으면 필연적으로 물(水) 기운을 많이 흡수하게 되고, 흙(土) 기운(소화기)이 압박을 받게 됩니다. 따라서 체내 수분이 마르지 않게 관리하고 피로가 누적되지 않도록 돕는 것이 핵심입니다.</p>
-    <div class="box ro"><strong>가장 완벽한 건강 관리법 (개운법):</strong><br>타고난 끈기를 살려 꾸준히 체중을 관리하고, <strong>러닝이나 마라톤 같은 규칙적인 유산소 운동</strong>으로 심폐 기능(火 기운)을 끌어올려 넘치는 목(木)의 에너지를 땀으로 흠뻑 발산하는 것이 건강을 지키고 운을 좋게 하는 최고의 방법입니다.</div>
-    </div>
-    </section>
-
-    <!-- Step 10 & 11 -->
     <section class="ch" id="cd-s10">
-    <div class="ch-ey">Step 10 & 11</div>
-    <h2 class="ch-ti">대운 및 세운 <span>상세 흐름</span></h2>
+    <div class="ch-ey">Step 10</div>
+    <h2 class="ch-ti">대운 <span>상세 흐름</span></h2>
     <div class="dg">
     <div class="dc">
-    <div class="dc-hd"><div><div class="dc-n">17운 · 17~26세 · 2009</div><div class="dc-nm">丙辰</div></div><div class="dc-ag">상관+정재</div></div>
+    <div class="dc-hd now"><div><div class="dc-n">27~36세</div><div class="dc-nm">丁巳</div></div><div class="dc-ag">식신+상관</div></div>
     <div class="dc-bd">
-    <div class="dc-kw">재능 발산과 사회 진출 준비</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">丙火 상관이 두뇌 회전과 표현력을 높여준 학업 및 성장기.</span></div>
+    <div class="dc-kw">강렬한 활동의 시대</div>
+    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">내 능력을 세상에 거침없이 표현하며 내공을 다지는 역동적인 시기입니다.</span></div>
     </div>
     </div>
     <div class="dc">
-    <div class="dc-hd now"><div><div class="dc-n">27운 · 27~36세 · 2019 ★현재</div><div class="dc-nm">丁巳</div></div><div class="dc-ag">식신+상관</div></div>
+    <div class="dc-hd peak"><div><div class="dc-n">37~46세</div><div class="dc-nm">戊午</div></div><div class="dc-ag">정재+식신</div></div>
     <div class="dc-bd">
-    <div class="dc-kw">강렬한 활동 · 내 능력을 세상에 증명</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">화(火) 기운이 폭발적으로 들어오는 역동적인 과도기.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">활동 반경을 넓히고 조직 내에서 능력을 거침없이 표현하며 내공을 다지는 시기입니다. 바쁘게 움직일수록 운이 트입니다.</span></div>
+    <div class="dc-kw">인생 최대 결실기</div>
+    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">뿌려놓은 노력이 실질적인 큰 재물과 사회적 지위로 연결되는 황금기입니다.</span></div>
     </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd peak"><div><div class="dc-n">37운 · 37~46세 · 2029 ◎</div><div class="dc-nm">戊午</div></div><div class="dc-ag">정재+식신</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">인생의 황금기 · 본격적인 재물 결실</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">재물(戊)과 그것을 만들어내는 재능(午)이 완벽하게 결합.</span></div>
-    <div class="dc-row"><span class="dc-lb">핵심</span><span class="dc-vl">그동안 뿌려놓은 노력과 투자들이 본격적인 재물과 안정적인 기반으로 크게 결실을 맺는 시기입니다.</span></div>
-    </div>
-    </div>
-    <div class="dc">
-    <div class="dc-hd peak"><div><div class="dc-n">47운 · 47~56세 · 2039 ◎</div><div class="dc-nm">己未</div></div><div class="dc-ag">편재+편재</div></div>
-    <div class="dc-bd">
-    <div class="dc-kw">자산의 스케일 확장 · 거시적 안목</div>
-    <div class="dc-row"><span class="dc-lb">구조</span><span class="dc-vl">위아래로 큰 재물(편재)이 강하게 들어오는 시기.</span></div>
-    <div class="dc-row"><span class="dc-lb">의미</span><span class="dc-vl">경제적 안정을 넘어 자산 규모가 커지는 구간입니다. 기획력과 시스템을 바탕으로 한 투자가 큰 빛을 발합니다.</span></div>
-    </div>
-    </div>
-    </div>
-
-    <div class="sec">
-    <h3 class="sec-ti">최근 세운 (2025~2026 대전환)</h3>
-    <div class="tw"><table>
-    <thead><tr><th style="width:17%">연도·나이</th><th style="width:12%">세운</th><th style="width:55%">핵심 내용</th><th style="width:16%">등급</th></tr></thead>
-    <tbody>
-    <tr class="yr-best">
-      <td class="bold">2025년<br>만 32세</td><td class="ctr bold">乙巳년</td>
-      <td>나와 같은 乙木이 오고, 역마를 뜻하는 巳火가 들어와 활동성이 매우 커집니다. <strong>새로운 기획이나 이동, 부서 이동 혹은 진로를 모색하는 워밍업의 해</strong>가 됩니다.</td>
-      <td class="ctr tg">준비·활동</td>
-    </tr>
-    <tr class="yr-best">
-      <td class="bold">2026년<br>만 33세</td><td class="ctr bold">丙午년</td>
-      <td><strong>이 사주에서 가장 중요한 대전환점입니다.</strong> 불(식상=내 재능, 표출) 에너지가 정점에 달하며, 답답한 조직(관)을 벗어나 독립하거나 획기적인 이직을 감행하는 강력한 에너지의 해입니다.</td>
-      <td class="ctr tg">★ 대전환</td>
-    </tr>
-    <tr class="yr-key">
-      <td class="bold">2027년<br>만 34세</td><td class="ctr bold">丁未년</td>
-      <td>2026년의 변화 이후 안정을 찾아가는 해입니다. 새로운 환경에서 재물(未=편재)을 다지며 나만의 시스템을 단단하게 구축하게 됩니다.</td>
-      <td class="ctr tt">안정 구축</td>
-    </tr>
-    </tbody>
-    </table></div>
-    </div>
-    </section>
-
-    <!-- Step 12 -->
-    <section class="ch" id="cd-s12">
-    <div class="ch-ey">Step 12</div>
-    <h2 class="ch-ti">자미두수 <span>명반 상세 분석</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">명반 핵심 풀이 (1993년 癸酉년 기준)</h3>
-    <div class="tw"><table>
-    <thead><tr><th>사화(四化)</th><th>별</th><th>의미와 발현</th></tr></thead>
-    <tbody>
-    <tr class="yr-best"><td class="tg bold">化祿 (화록)</td><td>破軍 (파군)</td><td>개척과 혁신의 별에 화록(풍요)이 붙어, 새로운 프로젝트를 기획하고 밀어붙일 때 오히려 재물과 복록이 따라오는 진취적인 기질을 나타냅니다.</td></tr>
-    <tr><td class="tt bold">化權 (화권)</td><td>巨門 (거문)</td><td>말과 연구, 지적 능력에 권력이 붙어, 논리적이고 체계적인 브리핑이나 협상 능력으로 타인을 설득하는 데 뛰어납니다.</td></tr>
-    <tr><td class="tgo bold">化科 (화과)</td><td>太陰 (태음)</td><td>세심한 계획과 관리 능력으로 주변의 명예와 인정을 획득합니다.</td></tr>
-    <tr class="yr-warn"><td class="tw2 bold">化忌 (화기)</td><td>貪狼 (탐랑)</td><td>욕망의 별에 막힘이 있어, 지나치게 쾌락을 좇거나 과도한 목표(허황된 일확천금)를 좇으면 탈이 납니다. 철저한 시스템 안에서 투자하는 것이 비결입니다.</td></tr>
-    </tbody>
-    </table></div>
-    <div class="box tl" style="margin-top:14px">
-    <strong>명궁 (紫微·天相 - 자미·천상):</strong> 황제(자미)와 정승(천상)의 별이 명궁에 동궁합니다. 타고난 리더십과 함께 <strong>모든 것을 체계적이고 치밀하게 관리하는 총괄 매니저(PM)</strong>의 품성을 보여줍니다. 오행구족 사주의 안정감과 완벽히 일치하는 고위급 기획자의 명반입니다.
     </div>
     </div>
     </section>
 
-    <!-- Step 13 -->
-    <section class="ch" id="cd-s13">
-    <div class="ch-ey">Step 13</div>
-    <h2 class="ch-ti">서양 점성술 <span>교차 검증</span></h2>
-    <div class="sec">
-    <div class="box tl">
-    <strong>명리학 + 점성술 종합 일치 패턴:</strong><br>
-    ① <strong>태양(Sun) 물병자리 (Aquarius):</strong> 감정에 치우치지 않는 차가운 지성과 논리력을 가졌습니다. 틀에 박힌 것을 싫어하고 늘 혁신적이고 체계적인 대안을 찾는 기획자의 성향과 일치합니다.<br>
-    ② <strong>달(Moon) 전갈자리 (Scorpio):</strong> 내면에는 무서운 집중력과 집요함(丑토의 끈기)이 자리 잡고 있습니다. 한 번 파고든 목표는 절대 포기하지 않는 강인한 멘탈의 소유자입니다.<br>
-    ③ <strong>지성과 깊이의 결합:</strong> 물병자리의 객관성과 전갈자리의 깊이가 결합되어, 매사를 거시적으로 보면서도(해외/투자 안목), 디테일한 시스템(사유축 금국)을 놓치지 않는 사주와 완벽하게 공명합니다.
-    </div>
-    </div>
-    </section>
-
-    <!-- Step 14 -->
     <section class="ch" id="cd-s14">
-    <div class="ch-ey">Step 14</div>
+    <div class="ch-ey">Final</div>
     <h2 class="ch-ti">현실 조언 <span>및 총평</span></h2>
-    <div class="sec">
-    <h3 class="sec-ti">성공을 위한 3가지 현실 조언</h3>
-    <div class="sub-ti">① 당신의 '기획력'이 곧 자본입니다.</div>
-    <p>사주의 금/토 배합과 자미·천상의 기운은 당신이 무언가를 구조화하고 매뉴얼로 만드는 데 탁월함을 의미합니다. 조직 내에서 기획, PM, 시스템 관리를 맡을 때 가장 빛나며, 투자를 할 때도 감이 아닌 '데이터베이스와 매뉴얼' 기반의 시스템 투자를 해야 합니다.</p>
-    <div class="sub-ti">② 운동화 끈을 조여 매세요. (개운법)</div>
-    <p>나무(木)가 무성하고 역마가 강합니다. 머리로만 고민하면 에너지가 갇혀 스트레스가 됩니다. 밖으로 나가 러닝을 하고 땀을 빼는 유산소 운동이 막힌 기운을 뚫어주는 가장 강력한 인생의 개운법입니다.</p>
-    <div class="sub-ti">③ 2026년의 거대한 전환을 두려워하지 마세요.</div>
-    <p>지금 겪고 있는 조직 내의 답답함이나 갈증은 다가올 2026년(병오년)의 큰 도약을 위한 웅크림입니다. 본인만의 굳건한 인생 시스템과 실력을 만들어두세요. 때가 오면 자연스럽게 알을 깨고 나가 멋진 독립(혹은 이직)을 이뤄낼 수 있습니다.</p>
-    </div>
-    <div class="sec">
-    <h3 class="sec-ti">총평</h3>
     <div class="box go">
-    <strong>"체계와 논리로 단단하게 뭉친, 멈추지 않는 성장의 아이콘"</strong><br>
-    모든 기운이 고르게 갖춰진 오행구족의 튼튼한 토대 위에, 봄의 나무(甲, 乙)가 무섭게 뻗어 나가는 강력한 사주입니다. 당신의 외유내강 기질과 뛰어난 기획력은 어떤 불안정한 시대에도 흔들림 없는 성과를 만들어 낼 것입니다. 머지않아 찾아올 30대 후반부터의 인생 황금기(戊午 대운)를 여유롭게 맞이하시길 바랍니다.
-    </div>
+    2026년은 당신에게 '독립'과 '도약'의 해입니다. 체계적인 기획력을 무기로 시스템을 구축하신다면 30대 후반부터는 누구보다 안정적인 성공을 누릴 것입니다.
     </div>
     </section>
-
-  </div><!-- /.wrap -->
+  </div>
 
   <footer>
-    <div>사주팔자 · 자미두수 · 서양점성술 종합 분석 완전판 — 최다민</div>
-    <div style="margin-top:4px">癸酉년 甲寅월 乙丑일 辛巳시 · 양력 1993. 02. 13 · 서울특별시 서대문구</div>
-    <div style="margin-top:4px">오행구족 사주 구조 확정 · 용희신 대운 풀이 · 3중 교차 검증 정밀 분석</div>
+    <div>사주팔자 종합 분석 — 최다민 리포트</div>
   </footer>
 </div>
 
 <!-- ── SCRIPTS ── -->
 <script>
 function switchTab(event, tabId) {
-  // Hide all panes
-  document.querySelectorAll('.tab-pane').forEach(function(pane) {
-    pane.classList.remove('active');
-  });
-  // Remove active from all buttons
-  document.querySelectorAll('.tab-btn').forEach(function(btn) {
-    btn.classList.remove('active');
-  });
-  // Show selected pane
+  const panes = document.querySelectorAll('.tab-pane');
+  panes.forEach(pane => pane.classList.remove('active'));
+  
+  const btns = document.querySelectorAll('.tab-btn');
+  btns.forEach(btn => btn.classList.remove('active'));
+  
   document.getElementById(tabId).classList.add('active');
-  // Highlight clicked button
   event.currentTarget.classList.add('active');
-  // Scroll to top
+  
   window.scrollTo(0, 0);
 }
+
+// 초기화: 첫 번째 탭 활성화
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash;
+  if(hash.startsWith('#cd')) {
+      document.querySelector('.tab-btn:nth-child(2)').click();
+  }
+});
 </script>
 </body>
 </html>
